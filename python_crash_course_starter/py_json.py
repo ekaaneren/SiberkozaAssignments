@@ -3,16 +3,16 @@
 import json
 
 #  Sample JSON
-userJSON = '{"first_name": "John", "last_name": "Doe", "age": 30}'
+userJSON_ke = '{"first_name": "John", "last_name": "Doe", "age": 30}'
 
 # Parse to dict
-user = json.loads(userJSON)
+user_ke = json.loads(userJSON_ke)
 
-# print(user)
-# print(user['first_name'])
+# print(user_ke)
+# print(user_ke['first_name'])
 
-car = {'make': 'Ford', 'model': 'Mustang', 'year': 1970}
+car_ke = {'make': 'Ford', 'model': 'Mustang', 'year': 1970}
 
-carJSON = json.dumps(car)
+carJSON_ke = json.dumps(car_ke)
 
-print(carJSON)
+print(carJSON_ke)
