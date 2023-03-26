@@ -25,24 +25,12 @@ def main():
         data.append(temp)
 
     model1 = word2vec(data, min_count=1, vector_size=100, window=5, sg=0)
-
-    print("Cosine similarity between 'machine' " +
-          "and 'matrix' - CBOW : ",
-          model1.wv.similarity('machine', 'matrix'))
-
-    print("Cosine similarity between 'alice' " +
-          "and 'machine' - CBOW : ",
-          model1.wv.similarity('alice', 'machine'))
+    print("Cosine similarity between 'machine' and 'matrix' - CBOW : ", model1.wv.similarity('machine', 'matrix'))
+    print("Cosine similarity between 'alice' and 'machine' - CBOW : ", model1.wv.similarity('alice', 'machine'))
 
     model2 = word2vec(data, min_count=1, vector_size=100, window=3, sg=1)
-
-    print("Cosine similarity between 'machine' " +
-          "and 'matrix' - Skip Gram : ",
-          model2.wv.similarity('machine', 'matrix'))
-
-    print("Cosine similarity between 'alice' " +
-          "and 'machine' - Skip Gram : ",
-          model2.wv.similarity('alice', 'machine'))
+    print("Cosine similarity between 'machine' and 'matrix' - Skip Gram : ", model2.wv.similarity('machine', 'matrix'))
+    print("Cosine similarity between 'alice' and 'machine' - Skip Gram : ", model2.wv.similarity('alice', 'machine'))
 
 
 main()
